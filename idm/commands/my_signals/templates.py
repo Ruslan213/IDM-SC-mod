@@ -1,7 +1,7 @@
 from ...objects import dp, MySignalEvent
 from ...utils import new_message, edit_message
 
-@dp.my_signal_event_handle('+шаб')
+@dp.my_signal_event_handle('+ш')
 def create_template(event: MySignalEvent) -> str:
 
     if ((event.payload == '' or event.payload == None) and len(event.attachments) == 0) or len(event.args) == 0:
@@ -28,7 +28,7 @@ def create_template(event: MySignalEvent) -> str:
     return "ok"
 
 
-@dp.my_signal_event_handle('-шаб')
+@dp.my_signal_event_handle('-ш')
 def remove_template(event: MySignalEvent) -> str:
 
     if len(event.args) == 0:
