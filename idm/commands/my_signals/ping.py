@@ -4,7 +4,7 @@ from datetime import datetime, date
 import socket, time
 import vkapi
 
-@dp.my_signal_event_handle('пинг', 'пиу', 'кинг', 'п', 'пингб', 'тик')
+@dp.my_signal_event_handle('пинг', 'пиу', 'кинг', 'п', 'пингб', 'тик', 'дон')
 def ping(event: MySignalEvent) -> str:
 
     if event.command == 'пингб':
@@ -17,12 +17,12 @@ def ping(event: MySignalEvent) -> str:
     #v_time_str = str(datetime.fromtimestamp(round(event.msg['date'])))
 
     r_type = ('ПОНГ' if event.command == "пинг" else "ПАУ"
-    if event.command == "пиу" else "ТОК" if event.command == "тик" else "КОНГ")
-    if delta > 15:r_type += "\nМОРОСИТ КОНКРЕТНО КТО-ТО!!!!!"
-    elif delta > 10:r_type += "\nЭЭЭЭЭ КТО МОРОСИТ?!"
-    elif delta > 5:r_type += "\nМоросит кто-то, что ли?"
-    else:r_type += "\nЕжжи по каефу работает всё"
-    message = f"""{r_type} CB
+    if event.command == "пиу" else "ЧИКИ БОН" if event.command == "дон" else "ТАК" if event.command == "тик" else "КОНГ"  )
+    if delta > 15:r_type += "\nЯ ЕБАЛ ТОМУ ЕБАЛО, ЯРИК БОЧЕК ПОТИК, ВРЕМЯ БЛЯТЬ БОЛЬШЕ 15 СЕК, БЕДЫ С VK_API"
+    elif delta > 10:r_type += "\nЯ ЕБАЛ ТОМУ ЕБАЛО, ЯРИК БОЧЕК ПРОТИКАЕТ, ВРЕМЯ ОТВЕТА БОЛЬШЕ 10 СЕК"
+    elif delta > 5:r_type += "\nЯРИК ВАДИЛА ВЫСШИЙ ПИЛОТАЖ, ВРЕМЯ ОТВЕТА БОЛЬШЕ 5 СЕК, НУ ЭТО НОРМ"
+    else:r_type += "\nВАДИЛАМ ПРИВЕТ, ВРЕМЯ ОТВЕТА МЕНЬШЕ 5 СЕК, ЭТО КЛАСС"
+    message = f"""{r_type} N2G
 
     Время ответа: {delta} с.
     """.replace('    ', '')
@@ -43,4 +43,5 @@ def ping(event: MySignalEvent) -> str:
     else:
         edit_message(event.api, event.chat.peer_id, event.msg['id'], message=message)
     return "ok"
+
 
