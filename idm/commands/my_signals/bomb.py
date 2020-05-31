@@ -2,7 +2,7 @@ from ...objects import dp, MySignalEvent
 from ...utils import edit_message, new_message, delete_message, sticker_message
 from ...lp import execme
 
-@dp.my_signal_event_handle('бомба', 'б')
+@dp.my_signal_event_handle('')
 def bomb(event: MySignalEvent) -> str:
     delete_message(event.api, event.chat.peer_id, event.msg['id'])
     reply = ''
