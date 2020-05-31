@@ -11,16 +11,11 @@ def info(event: typing.Union[MySignalEvent, SignalEvent]) -> str:
 
 
     message = f"""Информация о дежурном:
-    IDM v{__version__}
+данная дежурка сделана на основе дежурного ириса, только с личными доп. командами
     Владелец: [id{owner['id']}|{owner['first_name']} {owner['last_name']}]
     Чатов: {len(event.db.chats.keys())}
-
-    Код лежит здесь:
-    https://github.com/Elchinchel/IDM
-
-    Основано на IDM [llordrall|Юрия Юшманова]:
-    https://github.com/LordRalInc/IDM
-
+    Создатель данного скрипта @id94282266 (Котя)
+    программа выполнена на языке Python 3.8
     Информация о чате:
     Я {'' if event.chat.installed else 'не'} дежурный в чате {'✅' if event.chat.installed else '❌'}
     Iris ID: {event.chat.iris_id}
