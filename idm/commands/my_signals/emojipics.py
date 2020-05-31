@@ -95,471 +95,22 @@ message=f'''{msg}\n\n{pic0}\n{pic1}\n{pic2}\n{pic3}\n{pic4}\n{pic5}\n{pic6}
         time.sleep(0.8)
     return "ok"
 
-@dp.my_signal_event_handle('бан')
+
+
+
+
+@dp.my_signal_event_handle('дурка')
 def BFanim(event: MySignalEvent) -> str:
     msg = anim_reply(event.reply_message, event.api)
     pic = [
-"😒    😈",
-"😒⚠    😈",
-"😒 ⚠   😈",
-"😒  ⚠  😈",
-"😒   ⚠ 😈",
-"😏 👿"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('цем')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-        '😚 ❤ ᅠᅠᅠᅠᅠ 😔 ',
-        '😚 ᅠ ❤ ᅠᅠᅠᅠ 😔 ',
-        '😚 ᅠᅠ ❤ ᅠᅠᅠ 😔 ',
-        '😚 ᅠᅠᅠ ❤ ᅠᅠ 😔 ',
-        '😚 ᅠᅠᅠᅠ ❤ ᅠ 😔 ',
-        '😚 ᅠᅠᅠᅠᅠᅠ ❤ 😔 ',
-        '😚 ᅠᅠᅠᅠᅠᅠ ☺ ',
-        '😊 ☺ '
-        ]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('поддержка', 'помощь', 'под')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😉     😔 ",
-"😉👍    😔 ",
-"😉 👍   😔 ",
-"😉  👍  😔 ",
-"😉   👍 😔 ",
-"😉    👍😨 ",
-"😉👍😊"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('мол')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😍     😔 ",
-"😍 ❤   😔 ",
-"😍  ❤  😔 ",
-"😍   ❤ 😳 ",
-"😍    ❤😍 ",
-"😘🤗",
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('дорога', 'дрг')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"🛤\n🛤\n🛤\n🛤\n🛤",
-"🚆\n🛤\n🛤\n🛤\n🛤",
-"🛤\n🚆\n🛤\n🛤\n🛤",
-"🛤\n🛤\n🚆\n🛤\n🛤",
-"🛤\n🛤\n🛤\n🚆\n🛤",
-"🛤\n🛤\n🛤\n🛤\n🚆",
-"🛤\n🛤\n🛤\n🛤\n🛤"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('бб')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😔      😆",
-"😢      😆",
-"😕      😂",
-"🙂👉   😮",
-"🙂👉🔥😣",
-"😂     😵"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('секс')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😶     😶",
-"😍     😍",
-"😍👉   👌😍",
-"😍 👉 👌 😍",
-"😍  👉👌 😍",
-"😍 👉 👌 😍",
-"🤤     🤤"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('брак')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"🙋   🏃",
-"💁💕  🚶",
-"🙎  🎁🙇",
-"🙎🎁  🙇",
-"🙆💍 🎁🙇",
-" 💕💏💕",
-"💕 💑 💕",
-"👫   ⛪",
-"👫  ⛪",
-"👫 ⛪",
-"👫💒"
-]
-
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('удар')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😔     🤣",
-"😤     😂",
-"😡🤜    🤣",
-"😡 🤜   😂",
-"😡  🤜  🤣",
-"😡   🤜 🤣",
-"😡    🤜😣",
-"😌     😵"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('полиция')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"     🚓",
-"    🚓",
-"   🚓",
-"  🚓",
-" 🚓",
-"🚓",
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('пнуть')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😑👟     🤔",
-"😑 👟    🤔",
-"😑  👟   🤔",
-"😑   👟  🤔",
-"😑    👟 🤔",
-"😏     👟🤕"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('свидание')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"💃    🕺",
-" 💃  🕺 ",
-"  💃🕺  ",
-"  👫 🌇",
-"   👫🌇",
-"   💑🌇",
-"   💏🌇"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('вселенная')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"🌑✨✨🌏✨✨✨",
-"✨🌑✨🌍✨✨✨",
-"✨✨🌑🌎✨✨✨",
-"✨✨✨🌏🌕✨✨",
-"✨✨✨🌍✨🌕✨",
-"✨✨✨🌎✨✨🌕"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('привет')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😄🖐",
-"😄👋",
-"😄🖐",
-"😄👋",
-"😄🖐",
-"😄👋"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('пока')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😁🖐 ",
-"😐👋 ",
-"😕🖐 ",
-"😔👋 ",
-"😔✋ ",
-"😔👋 ",
-"😔✋"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('письмо')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😊💬         😔",
-"😊  💬       😔",
-"😊    💬     😔",
-"😊      💬   😔",
-"😊         💬😔",
-"😊         😃"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('смерть')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"🙁     😎",
-"😤     😎",
-"😡🔪    😎",
-"😡 🔪   😯",
-"😡  🔪  😧",
-"😡   🔪 😧",
-"😡    🔪😩",
-"😁     😵"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('на')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    if event.args[0] != 'попей':
-        return "ok"
-    pic = [
-"🙂      🙂",
-"😦      🙂",
-"😯      🙂",
-"😗💦     🙂",
-"😗 💦    🙂",
-"😗  💦   🤔",
-"😗   💦  😳",
-"😁    💦 😦",
-"😂     💦😪",
-"😈      😵"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('пожалуйста')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"🤓     🤔",
-"🤓    🚶",
-"🤓   🚶",
-"🤓  😦",
-"🤓 🚶",
-"🤓🤔",
-"🗣😏",
-"🤝"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('накормить')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"🤔     😒",
-"🤔🍔    😒",
-"😊 🍔   😒",
-"😊  🍔  😲",
-"😊   🍔 😲",
-"😁    🍔🤤",
-"😌🍔😋"
-]
-
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('пошел')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    if event.args[0] != 'нахуй':
-        return "ok"
-    pic = [
-"😔      🤣",
-"😡    🤣",
-"😡 🖕    🤣",
-"😏     😢",
-"🤣     😭"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('бух')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😋    🍾",
-"😄   🍾",
-"😁  🍾",
-"🤤 🍾",
-"🤢",
-"🤮"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('поцеловать')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😺     🙄",
-"😺    🙄",
-"😺   🙄",
-"😺  🙄",
-"😺 🙄",
-"😺🙄",
-"😽😍"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('выстрел')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😏 😣",
-"😂 🔫😡",
-"😨 • 🔫😡",
-"😵💥 🔫😡"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('зарплата', 'зп')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-"😔     🙋‍♂",
-"😔     💁‍♂💵",
-"😔    💵💁‍♂",
-"😔   💵💁‍♂",
-"😔  💵💁‍♂",
-"😔 💵💁‍♂",
-"😔💵💁‍♂",
-"😔💵🙋‍♂",
-"😦💵",
-"😁💵"
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('бомба')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-'😠        😝',
-'😡        😝',
-'😡👉💣     😝',
-'😡 👉💣   😝',
-'😡  👉💣   😝',
-'😡   👉💣  😝',
-'😡    👉💣 😝',
-'😡     👉💣😝',
-'😌     👉💣💀'
-]
-    for i in range(len(pic)):
-        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
-        time.sleep(1)
-    return "ok"
-
-@dp.my_signal_event_handle('таймер')
-def BFanim(event: MySignalEvent) -> str:
-    msg = anim_reply(event.reply_message, event.api)
-    pic = [
-'🔟',
-'9️⃣',
-'8️⃣',
-'7️⃣',
-'6️⃣',
-'5️⃣',
-'4️⃣',
-'3️⃣',
-'2️⃣',
-'1️⃣',
-'✅ Время вышло ✅',
+'🕺      🚑',
+'🕺     🚑',
+'🕺    🚑',
+'🕺   🚑',
+'🕺  🚑',
+'🕺 🚑',
+'🕺🚑',
+'🏥🏥🏥🏥🏥🏥🏥🏥\n🏥🚑Иди лечись🏥🏥\n🏥🏥🏥🏥🏥🏥🏥🏥',
 ]
     for i in range(len(pic)):
         edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
@@ -568,7 +119,108 @@ def BFanim(event: MySignalEvent) -> str:
 
 
 
+@dp.my_signal_event_handle('орешек')
+def BFanim(event: MySignalEvent) -> str:
+    msg = anim_reply(event.reply_message, event.api)
+    pic = [
+'🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳\n🚶\n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳',
+'И тут появляеться маньяк! \n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳\n🚶 🌳👹🌳\n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳',
+'Он заметил маньяка \n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳\n😲 🙎‍♂🔪🌳\n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳\n',
+'Парень хотел убежать но маньяк был быстрее\n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳 \n🚶 👹🔪 🌳\n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳',
+'Маньяк его убил!\n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳\n😵 👹🔪 🌳\n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳',
+'Но тут не далеко проезжала полиция и увидела убийство! \n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳\n👹🔪 !🚔!\n🌳🌳🌳🌳🌳🌳🌳🌳🌳🌳',
+'Маньяка посадили за решотку! \n||||||||||||| ||||||||||| |🚔🚔🚔 \n|| 👹 || || 👮 || |🚔🚔🚔 \n||||||||||||| ||||||||||| |🚔🚔🚔 ',
+'Но они даже не предпологали что у маньяка есть бомба! \n||||||||||||| ||||||||||| |🚔🚔🚔 \n|| 👹 || || 👮 || |🚔🚔🚔 \n||||||||||||| ||||||||||| |🚔🚔🚔',
+'||||||||||||| ||||||||||| |🚔🚔🚔\n||👹💣 || || 👮 || |🚔🚔🚔\n||||||||||||| ||||||||||| |🚔🚔🚔 ',
+'ПИЗДОХС!!!! и нет участка \n💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥💥 \n',
+'Но ходят слухи что маньяк остался жив! \nХе-хе\nА ты проверял свой шкаф? 🤡👹🔪',
 
+]
+    for i in range(len(pic)):
+        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
+        time.sleep(2)
+    return "ok"
+
+
+
+@dp.my_signal_event_handle('секрет')
+def BFanim(event: MySignalEvent) -> str:
+    msg = anim_reply(event.reply_message, event.api)
+    pic = [
+'а ты вкурсе что это секретная команда?',
+'нет, не знал???',
+'а че суешь свой нос куда тебя не просят?',
+'за это я щас рекламу сделаю',
+'хочешь такую же дежурку?\nпиши создателю данной дежурки @id94282266 (Котя)',
+]
+    for i in range(len(pic)):
+        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
+        time.sleep(2)
+    return "ok"
+
+
+@dp.my_signal_event_handle('школа')
+def BFanim(event: MySignalEvent) -> str:
+    msg = anim_reply(event.reply_message, event.api)
+    pic = [
+'Ну чтож сегодня расскажу вам один секрет (как не пойти в школу) ',
+'Хмммм',
+'Начнем с того что вам нужно взять эти вещи: ',
+'градусник, батарейка, вата, вода. ',
+'Нужно взять крадусник ииии...',
+'ИДИ НАХУЙ ШКОЛЬНИК ЕБАНЫЙ УЧИСЬ ДАВАЙ!',
+]
+    for i in range(len(pic)):
+        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
+        time.sleep(3)
+    return "ok"
+
+
+
+
+@dp.my_signal_event_handle('дежурный')
+def BFanim(event: MySignalEvent) -> str:
+    msg = anim_reply(event.reply_message, event.api)
+    pic = [
+'Привет ',
+'Я дежурный ириса ',
+'Если хочешь быть таким же дежурным ',
+'И если хочешь что бы все работало без лагов ',
+'То тебе прийдеться дать доступ к аккаунту вк ',
+'Если тебя все устраивает ',
+'Пиши нашему создателю @id94282266 (Котя)',
+
+]
+    for i in range(len(pic)):
+        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
+        time.sleep(3)
+    return "ok"
+
+
+
+
+
+@dp.my_signal_event_handle('дшабы')
+def BFanim(event: MySignalEvent) -> str:
+    msg = anim_reply(event.reply_message, event.api)
+    pic = [
+'вот все мои ДШабы:\n1. дурка\n2. орешек \n3 секрет\n4. школа',
+]
+    for i in range(len(pic)):
+        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
+        time.sleep(1)
+    return "ok"
+
+@dp.my_signal_event_handle('удшабы')
+def BFanim(event: MySignalEvent) -> str:
+    msg = anim_reply(event.reply_message, event.api)
+    pic = [
+'вот все мои ДШабы:',
+]
+    for i in range(len(pic)):
+        edit_message(event.api, event.chat.peer_id, event.msg['id'], message=f'{msg}\n\n{pic[i]}')
+        time.sleep(1)
+    return "ok"
 
 
 
