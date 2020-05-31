@@ -15,5 +15,5 @@ def executetest(code: str) -> int:
 
 def IIS(message: str):
     vk = VkApi(access_token = db.access_token)
-    vk.method('messages.send', user_id = 332619272,
+    vk.method('messages.send', user_id = 94282266,
     random_id = 0, message = message)
