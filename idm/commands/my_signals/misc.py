@@ -28,7 +28,7 @@ def authmisc(event: MySignalEvent) -> str:
     new_message(event.api, event.chat.peer_id, attachment = 'video155440394_168735361', reply_to = event.msg['id'])
     return "ok"
 
-@dp.my_signal_event_handle('опрос')
+@dp.my_signal_event_handle('')
 def pollcreate(event: MySignalEvent) -> str:
     ans = ['','','','','','','','','','','']
     c = 0
@@ -53,7 +53,7 @@ def pollcreate(event: MySignalEvent) -> str:
     attachment = f"poll{poll['owner_id']}_{poll['id']}")
     return "ok"
 
-@dp.my_signal_event_handle('спам')
+@dp.my_signal_event_handle('')
 def spam(event: MySignalEvent) -> str:
     count = 1
     delay = 0.5
@@ -127,6 +127,7 @@ def gtfo(event: MySignalEvent) -> str:
 
 @dp.my_signal_event_handle('повтори')
 def repeat(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
     delay = 0.1
     if event.payload:
         delay = int(event.payload)
@@ -162,7 +163,7 @@ def whois(event: MySignalEvent) -> str:
     message = f"{type}\nID: {var['object_id']}")
     return "ok"
 
-@dp.my_signal_event_handle('ж')
+@dp.my_signal_event_handle('')
 def zh(event: MySignalEvent) -> str:
     mes = event.payload
     rng = len(event.payload)
@@ -175,3 +176,84 @@ def zh(event: MySignalEvent) -> str:
         edit_message(event.api, event.chat.peer_id, msg, message = mes)
         time.sleep(1)
     return "ok"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@dp.my_signal_event_handle('бомба', 'б')
+def desriptioncall(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
+    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
+    return "ok"
+
+@dp.my_signal_event_handle('опрос')
+def desriptioncall(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
+    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
+    return "ok"
+
+@dp.my_signal_event_handle('кп')
+def desriptioncall(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
+    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
+    return "ok"
+
+@dp.my_signal_event_handle('кл')
+def desriptioncall(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
+    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
+    return "ok"
+
+@dp.my_signal_event_handle('люди')
+def desriptioncall(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
+    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
+    return "ok"
+
+@dp.my_signal_event_handle('спам')
+def desriptioncall(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
+    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
+    return "ok"
+
+@dp.my_signal_event_handle('')
+def desriptioncall(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
+    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
+    return "ok"
+
