@@ -4,10 +4,12 @@ from datetime import datetime
 from vkapi import VkApiResponseException
 import time
 
-@dp.my_signal_event_handle('-смс', 'dsm', '-смсб')
+@dp.my_signal_event_handle('-смс', 'dsm', '-смсб', 'дд')
 def delete_self_message(event: MySignalEvent) -> str:
     message_id = event.msg['id']
-    utils.edit_message(event.api, event.chat.peer_id, message_id, message="хехехе ща падажжы удаляю")
+    utils.edit_message(event.api, event.chat.peer_id, message_id, message="не буду удалять, сам удаляй")
+    time.sleep(3)
+    utils.edit_message(event.api, event.chat.peer_id, message_id, message="я скакзал НЕ БУДУ")
     user_id = event.msg['from_id']
     if event.command == '-смсб':
         period = 1800
@@ -34,7 +36,7 @@ def delete_self_message(event: MySignalEvent) -> str:
     message_id = 0
     try:
         event.api("messages.delete", message_ids=",".join(msg_ids), delete_for_all=1)
-        message_id = utils.new_message(event.api, event.chat.peer_id, message="✅ ГОТОВО НАХУЙ")
+        message_id = utils.new_message(event.api, event.chat.peer_id, message="✅ ГОТОВО НАХУЙ, ВСЁ БЛЯТЬ, У МЕНЯ ПЕРЕРЫВ")
     except VkApiResponseException as e:
         if e.error_code == 924:
             message_id = utils.new_message(event.api, event.chat.peer_id, message="❗ Не удалось удалить сообщения.")
