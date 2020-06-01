@@ -15,10 +15,16 @@ def timecheck(event: MySignalEvent) -> str:
     ct = datetime.now()
     new_message(event.api, event.chat.peer_id, message = ct)
 
+
+
+
+
+
+
 @dp.my_signal_event_handle('описание')
 def desriptioncall(event: MySignalEvent) -> str:
     delete_message(event.api, event.chat.peer_id, event.msg['id'])
-    msg = new_message(event.api, event.chat.peer_id, message = 'описание')
+    msg = new_message(event.api, event.chat.peer_id, message = '')
     time.sleep(3)
     delete_message(event.api, event.chat.peer_id, msg)
     return "ok"
@@ -28,7 +34,7 @@ def authmisc(event: MySignalEvent) -> str:
     new_message(event.api, event.chat.peer_id, attachment = 'video155440394_168735361', reply_to = event.msg['id'])
     return "ok"
 
-@dp.my_signal_event_handle('')
+@dp.my_signal_event_handle('опрос')
 def pollcreate(event: MySignalEvent) -> str:
     ans = ['','','','','','','','','','','']
     c = 0
@@ -53,8 +59,9 @@ def pollcreate(event: MySignalEvent) -> str:
     attachment = f"poll{poll['owner_id']}_{poll['id']}")
     return "ok"
 
-@dp.my_signal_event_handle('')
+@dp.my_signal_event_handle('спам')
 def spam(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
     count = 1
     delay = 0.5
     if event.args != None:
@@ -74,11 +81,14 @@ def spam(event: MySignalEvent) -> str:
             time.sleep(delay)
     return "ok"
 
-@dp.my_signal_event_handle('прочитать')
+@dp.my_signal_event_handle('прочитать', "чекни")
 def readmes(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
     if event.args:
         if event.args[0] == 'все' or event.args[0] == 'всё':
             msg = new_message(event.api, event.chat.peer_id, message=f"🕵‍♂ Читаю сообщения...")
+            time.sleep(2)
+            edit_message(event.api, event.chat.peer_id, msg, message=f'🕵‍♂ щас все твои секретики узнаю')
             msgs = event.api('messages.getConversations', count = 200)
             items = msgs['items']
             cnt = 0
@@ -163,97 +173,48 @@ def whois(event: MySignalEvent) -> str:
     message = f"{type}\nID: {var['object_id']}")
     return "ok"
 
-@dp.my_signal_event_handle('')
+@dp.my_signal_event_handle('кл')
 def zh(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
     mes = event.payload
     rng = len(event.payload)
-    if rng > 15:
+    if rng > 20:
         new_message(event.api, event.chat.peer_id, message = '❗ Слишком длинное сообщение, будет прокручено не полностью')
-        rng = 15
+        rng = 20
+    msg = new_message(event.api, event.chat.peer_id, message = mes)
+    for i in range(rng):
+        mes = mes[+1:] + mes[:+1]
+        edit_message(event.api, event.chat.peer_id, msg, message = mes)
+        time.sleep(2)
+    return "ok"
+
+@dp.my_signal_event_handle('кп')
+def zh(event: MySignalEvent) -> str:
+    delete_message(event.api, event.chat.peer_id, event.msg['id'])
+    mes = event.payload
+    rng = len(event.payload)
+    if rng > 20:
+        new_message(event.api, event.chat.peer_id, message = '❗ Слишком длинное сообщение, будет прокручено не полностью')
+        rng = 20
     msg = new_message(event.api, event.chat.peer_id, message = mes)
     for i in range(rng):
         mes = mes[-1:] + mes[:-1]
         edit_message(event.api, event.chat.peer_id, msg, message = mes)
-        time.sleep(1)
+        time.sleep(2)
     return "ok"
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@dp.my_signal_event_handle('бомба', 'б')
-def desriptioncall(event: MySignalEvent) -> str:
+@dp.my_signal_event_handle('ктс')
+def zh(event: MySignalEvent) -> str:
     delete_message(event.api, event.chat.peer_id, event.msg['id'])
-    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
+    mes = event.payload
+    rng = len(event.payload)
+    if rng > 20:
+        new_message(event.api, event.chat.peer_id, message = '❗ Слишком длинное сообщение, будет прокручено не полностью')
+        rng = 20
+    msg = new_message(event.api, event.chat.peer_id, message = mes)
+    for i in range(rng):
+        mes = mes[-100:] + mes[:+100]
+        edit_message(event.api, event.chat.peer_id, msg, message = mes)
+        time.sleep(2)
     return "ok"
-
-@dp.my_signal_event_handle('опрос')
-def desriptioncall(event: MySignalEvent) -> str:
-    delete_message(event.api, event.chat.peer_id, event.msg['id'])
-    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
-    return "ok"
-
-@dp.my_signal_event_handle('кп')
-def desriptioncall(event: MySignalEvent) -> str:
-    delete_message(event.api, event.chat.peer_id, event.msg['id'])
-    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
-    return "ok"
-
-@dp.my_signal_event_handle('кл')
-def desriptioncall(event: MySignalEvent) -> str:
-    delete_message(event.api, event.chat.peer_id, event.msg['id'])
-    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
-    return "ok"
-
-@dp.my_signal_event_handle('люди')
-def desriptioncall(event: MySignalEvent) -> str:
-    delete_message(event.api, event.chat.peer_id, event.msg['id'])
-    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
-    return "ok"
-
-@dp.my_signal_event_handle('спам')
-def desriptioncall(event: MySignalEvent) -> str:
-    delete_message(event.api, event.chat.peer_id, event.msg['id'])
-    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
-    return "ok"
-
-@dp.my_signal_event_handle('')
-def desriptioncall(event: MySignalEvent) -> str:
-    delete_message(event.api, event.chat.peer_id, event.msg['id'])
-    msg = new_message(event.api, event.chat.peer_id, message = '⛔ данная команда в категории ⓋⒾⓅ команд ⛔')
-    return "ok"
-
