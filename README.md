@@ -31,7 +31,7 @@
 (это две команды, после каждой нужно нажимать Enter)
 ```bash
 rm -rf IDM-SC-mod
-git clone https://github.com/Elchinchel/IDM-SC-mod.git
+git clone https://github.com/Ruslan213/IDM-SC-mod
 ```
 Далее переходим во вкладку *Web* и нажимаем *Reload * `имя аккаунта`.pythonanywhere.com
 
